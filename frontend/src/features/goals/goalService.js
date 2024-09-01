@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "/api/goals/";
+const API_URL = "https://goalpulse-web.vercel.app/api/goals/";
 
 // Create new goal
 const createGoal = async (goalData, token) => {

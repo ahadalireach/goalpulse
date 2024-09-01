@@ -13,7 +13,9 @@ function Register() {
     password: "",
     password2: "",
   });
+
   const [showPassword, setShowPassword] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
 
   const { name, email, password, password2 } = formData;
 
@@ -116,7 +118,7 @@ function Register() {
           </div>
           <div className="form-group">
             <input
-              type={showPassword ? "text" : "password"}
+              type={showPassword2 ? "text" : "password"}
               className="form-control"
               id="password2"
               name="password2"
@@ -124,6 +126,12 @@ function Register() {
               placeholder="Confirm password"
               onChange={onChange}
             />
+            <span
+              className="password-toggle"
+              onClick={() => setShowPassword2(!showPassword2)}
+            >
+              {showPassword2 ? <FaEyeSlash /> : <FaEye />}
+            </span>
           </div>
           <div className="form-group">
             <button type="submit" className="btn btn-block">
